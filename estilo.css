@@ -9,7 +9,83 @@
     --bege: #f6f6ef;
 }
 
-body{
+*{
     margin:0;
     padding:0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+
+footer{
+    width: 100%;
+    color: var(--white);
+}
+#container{
+    align-items: center;
+}
+#footer_content{
+    background-color: var(--cinza);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem 2.5rem;
+    
+}
+
+#footer_contacts {
+    margin-bottom: 0.75rem;
+}
+
+#logo{
+    width: 20rem;
+    height:10rem;
+}
+
+
+#footer-link{
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0.5rem;
+    gap:2rem;
+    transition: all 0.4s;
+    justify-content: center;
+}
+
+
+#footer-link:hover{
+    height: 2.5rem;
+    width: 2.5rem;
+    opacity: 0.5;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction :column;
+    gap:0.75rem;
+    list-style: none;
+    margin-inline: 3rem;
+}
+
+#footer_copyright{
+    display: flex;
+    justify-content: center;
+    background-color: var(--cinza);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight:100;
+}
+
+@media screen and (max-width: 750px) {
+    #footer_content{
+        grid-template-columns: repeat(1,1fr);
+        gap: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 426px) {
+    #footer_content{
+        display:grid;
+        padding: 3rem 2rem;
+    }
 }
