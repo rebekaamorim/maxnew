@@ -1,3 +1,44 @@
+/** fontes **/
+@font-face{
+    font-family: 'Barlow Bold';
+    src: url('fonts/Barlow-Bold.ttf')
+    format('truetype');
+}
+@font-face{
+    font-family: 'Barlow Medium';
+    src: url('fonts/Barlow-Medium.ttf')
+    format('truetype');
+}
+@font-face{
+    font-family: 'Barlow Regular';
+    src: url('fonts/Barlow-Regular.ttf')
+    format('truetype');
+}
+@font-face{
+    font-family: 'Barlow Condensed Bold';
+    src: url('fonts/BarlowCondensed-Bold.ttf')
+    format('truetype');
+}
+@font-face{
+    font-family: 'Barlow SemiCondensed Bold';
+    src: url('fonts/BarlowSemiCondensed-Bold.ttf')
+    format('truetype');
+}
+@font-face{
+    font-family: 'Open Sans Bold';
+    src: url('fonts/OpenSans-Bold.ttf')
+    format('truetype');
+}
+@font-face{
+    font-family: 'Open Sans Regular';
+    src: url('fonts/OpenSans-Regular.ttf')
+    format('truetype');
+}
+@font-face{
+    font-family: 'Open Sauce';
+    src: url('fonts/OpenSauceOne-Bold.ttf')
+    format('truetype');
+}
 
 :root{
     --cinza: #545454;
@@ -12,4 +53,14 @@
 body{
     margin:0;
     padding:0;
+}
+
+
+@media(max-width: 750px){
+    
+}
+
+
+@media(min-width: 751px){
+
 }
