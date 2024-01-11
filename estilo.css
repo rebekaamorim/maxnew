@@ -1,1 +1,15 @@
 
+:root{
+    --cinza: #545454;
+    --laranja: #f79126;
+    --cinza-claro: #d9d9d9;
+    --white: #fff;
+    --cinza-medio: #a6a6a6;
+    --amarelo: #ffde59;
+    --bege: #f6f6ef;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
