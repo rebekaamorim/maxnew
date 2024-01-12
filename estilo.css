@@ -80,7 +80,7 @@
 #header.rolagem{
     background: linear-gradient(to bottom, #545454, #a6a6a6, transparent);
     padding-top: 10px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 #header ul{
@@ -145,10 +145,18 @@
     font-size:22px;
     margin-left: 16px;
     color: var(--laranja);
-    transition: .2s;
+    transition: 0.2s;
 }
 
+/** serviços **/
 
+.servicos{
+    height: 100vh;
+    background-image: url(img/fundo.png);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /** rodapé **/
 footer{
     width: 100%;
