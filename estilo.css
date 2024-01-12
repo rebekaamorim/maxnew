@@ -55,9 +55,101 @@
     padding:0;
     box-sizing: border-box;
     letter-spacing: 1px;
+}bar
+
+/** navbar **/
+.container{
+    max-width: 1280px;
+    margin:auto;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header{
+    width: 100%;
+    padding-top: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#header.rolagem{
+    background: linear-gradient(to bottom, #545454, #a6a6a6, transparent);
+    padding-top: 10px;
+    transition: .5s;
+}
+
+#header ul{
+    list-style: none;
+}
+
+#header ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#header ul li a{
+    font-family: 'Barlow Bold';
+    font-size: 20px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+#header ul li a:hover{
+    font-family: 'Barlow Bold';
+    font-size: 22px;
+    color: var(--laranja);
+    transition: .5s;
 }
 
 
+.banner {
+    height: 100vh;
+    background-image: url(img/hidrojateamento.jpg);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo{
+    width: auto;
+    height: 90px;
+}
+
+#container_tel{
+    display: flex;
+    align-items: center;
+}
+
+#container_tel img{
+    max-width: 35px;
+    max-height: 35px;
+    width: auto;
+    height: auto;
+}
+
+#container_tel a{
+    font-family: 'Barlow Bold';
+    font-size: 20px;
+    margin-left: 16px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+#container_tel a:hover{
+    font-family: 'Barlow Bold';
+    font-size:22px;
+    margin-left: 16px;
+    color: var(--laranja);
+    transition: .2s;
+}
+
+
+/** rodapé **/
 footer{
     width: 100%;
     color: var(--white);
