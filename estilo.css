@@ -158,7 +158,7 @@ footer{
     
 }
 
-#footer_content{
+.footer_content{
     background-color: var(--cinza);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
