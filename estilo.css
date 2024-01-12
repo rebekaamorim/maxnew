@@ -62,10 +62,10 @@ footer{
     width: 100%;
     color: var(--white);
     font-family: 'Barlow Regular';
+    justify-content: end;
+    
 }
-#container{
-    align-items: center;
-}
+
 #footer_content{
     background-color: var(--cinza);
     display: grid;
@@ -77,7 +77,10 @@ footer{
 #footer_contacts {
     margin-bottom: 0.75rem;
 }
-
+#telefone{
+    align-items: center;
+    display: flex;
+}
 #logo{
     width: 20rem;
     height:10rem;
@@ -121,6 +124,7 @@ footer{
     #footer_content{
         grid-template-columns: repeat(1,1fr);
         gap: 2rem;
+
     }
 }
 
@@ -129,6 +133,7 @@ footer{
     #footer_content{
         display:grid;
         padding: 3rem 2rem;
+        
     }
 }
 
