@@ -1,2 +1,0 @@
-# maxnew
-Site Max New
