@@ -47,7 +47,7 @@
     --white: #fff;
     --cinza-medio: #a6a6a6;
     --amarelo: #ffde59;
-    --bege: #f6f6ef;
+    --bege: #e9e9d2;
 }
 
 *{
@@ -146,6 +146,7 @@
     margin-left: 16px;
     color: var(--laranja);
     transition: 0.2s;
+   
 }
 
 /** serviços **/
@@ -156,7 +157,102 @@
     background-position: 100% 0;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 25px;
+    padding-block-end: 30px;
+    
 }
+
+.servicos h1{
+    font-family: 'Barlow SemiCondensed Bold';
+    font-size: 70px;
+    color: var(--laranja);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    z-index: 3;
+
+}
+
+#fundo_servicos{
+    width: auto;
+    height: 50rem;
+    margin-inline: 10rem;
+    background-color: var(--bege);
+    border-radius: 5rem;
+    opacity: 0.5;
+    position: relative;
+    z-index: 1;
+    margin-top: -3%;
+}
+
+.imagens{
+    display: flex;
+    position: relative;
+    z-index: 2;
+    margin-top: -30%;
+    margin-inline: 20rem;
+    
+}
+
+
+.imagens .caixa{
+    position: relative ;
+    margin-top: -5%;
+    z-index: 5;
+    width:300px;
+    height: 400px;
+    background-color: #fff;
+    margin-inline: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5), 0 -15px 15px -15px rgba(0, 0, 0, 0.5);;
+    transition: 0.5s;
+    background-size: cover;
+}
+
+
+.imagens .caixa:hover{
+    scale: 1.2;
+    transition: .5s;
+    cursor:pointer;
+}
+
+
+.imagens .caixa::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 2rem;
+    background-size: cover;
+    filter: blur(25px);
+    opacity: 0.5;
+    z-index:1
+
+}
+.imagens .caixa:hover::before{
+    opacity:0;
+    transition: .2s;
+}
+
+
+.imagens .caixa:hover .fundo_caixa{
+    position: relative;
+    z-index: 9;
+    width: 1100px;
+    height: 600px;
+    margin-inline: 1rem;
+    border-radius: 2rem;
+    transition: .5s;
+    background-color: #545454;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+
 /** rodapé **/
 footer{
     width: 100%;
@@ -253,8 +349,8 @@ footer{
         margin-inline: 2rem;
     }
     .logo{
-        width: 20rem;
-        height: 10rem;
+        width: 15rem;
+        height: 7.5rem;
     }
     
 }
