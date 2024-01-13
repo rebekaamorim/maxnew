@@ -1,4 +1,4 @@
-/** fontes **/
+/* fontes */
 @font-face{
     font-family: 'Barlow Bold';
     src: url('fonts/Barlow-Bold.ttf')
@@ -480,7 +480,6 @@ footer{
     #footer_content{
         grid-template-columns: repeat(1,1fr);
         gap: 2rem;
-
     }
 }
 
@@ -489,28 +488,70 @@ footer{
     #footer_content{
         display:grid;
         padding: 3rem 2rem;
-        
     }
 }
 
-@media(min-width: 1300px){
-    .container{
-        margin-inline: 1rem;
+
+@media screen and (min-width: 1460px){
+    /* navbar */
+    #header{
+        padding: 60px 4%;
+    }
+    #header.rolagem{
+        padding-top: 20px;
     }
     .logo{
-        width: 15rem;
-        height: 7.5rem;
+        height: 130px;
+    }
+    .nav ul li a{
+        font-size: 23px;
     }
     
 }
 
-@media(min-width: 1500px){
-    .container{
-        margin-inline: 2rem;
+@media screen and (min-width: 1281px){
+    /* navbar */
+    #header{
+        padding: 40px 1%;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    /* navbar */
+    #header{
+        padding: 40px 3%;
+    }
+    #container_tel{
+        display:none;
+    }
+    .nav ul li a{
+        padding: 15px 0;
+    }
+    
+}
+
+@media screen and (max-width: 1115px){
+    /* navbar */
+    .nav ul{
+        display: none;
+    }
+    #container_tel{
+        display:none;
+    }
+    #header{
+        padding: 40px 4%;
+    }
+    #btn_menu{
+        display: block;
+        z-index: 2;
+    }
+    .nav_mobile.abrir{
+        visibility: visible;
+        height: 100vh;
     }
     .logo{
-        width: 15rem;
-        height: 7.5rem;
+        width: auto;
+        height: 110px;
     }
     
 }
