@@ -75,7 +75,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 7;
 }
 
 #header.rolagem{
@@ -112,16 +112,99 @@
     transition: .5s;
 }
 
-.banner {
-    background-position: 100% 0;
-}
 
 .banner video{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
     object-fit: cover;
+}
+#sombra_esquerda{
+    width: 40vw;
+    height: 100vh;
+    background: linear-gradient(to right, black, #353434, #505050, #d9d9d9);
+    opacity: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#orcamento_main{
+    width: 45vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+#orcamento_main h1{
+    font-family: 'Barlow SemiCondensed Bold';
+    font-size: 3rem;
+    color: var(--white);
+    text-align: left;
+    line-height: 80px;
+    margin-top: 33vh;
+    margin-left: 15%;
+}
+#orcamento_main button{
+    width: 275px;
+    height: 60px;
+    background: linear-gradient(90deg, #ff6c10,#ff6c10, #ebbc00);
+    border: 0px;
+    border-radius: 40px;
+    font-family: 'Barlow SemiCondensed Bold';
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--white);
+    margin-top: 2.5rem;
+    margin-left: 15%;
+    padding-right: 20px;
+    cursor: pointer;
+}
+#orcamento_main button:hover{
+    width: 290px;
+    height: 65px;
+    background: linear-gradient(90deg, #ffde59,#f79126);
+    transition: 0.5s;
+}
+#sombra_direita{
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left, black, #353434, #505050, #d9d9d9);
+    opacity: 60%;
+    z-index: 1;
+}
+#social_main{
+    position:absolute;
+    bottom: 40px;
+    right: 20px;
+    display: flex;
+    z-index: 4;
+    align-items: center;
+}
+#social_main label{
+    font-family: 'Open Sauce';
+    font-size: 1rem;
+    color:#fff;
+    margin-right: 10px;
+}
+#social_main hr{
+    height:40px;
+}
+
+#social_main img{
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+#social_main img:hover{
+    width: 40px;
+    height: 40px;
+    transition: .2s;
 }
 
 .logo{
@@ -164,6 +247,8 @@
     background: transparent;
     border-color: transparent;
     cursor: pointer;
+    display: none;
+    z-index: 8;
 }
 .linha{
     width: 35px;
@@ -175,10 +260,6 @@
     position: relative;
     transform-origin: center;
     transition: .2s;
-}
-
-#btn_menu{
-    display: none;
 }
 #btn_menu.hamburguer .linha:nth-child(1) {
     transform: translateY(13px) rotate(-45deg);
@@ -213,7 +294,7 @@
 }
 .nav_mobile ul li a{
     font-family: 'Barlow Bold';
-    font-size: 30px;
+    font-size: 1.5rem;
     color: var(--white);
     text-decoration: none;
     display:inline-flex;
@@ -336,7 +417,6 @@ footer{
     color: var(--white);
     font-family: 'Barlow Regular';
     justify-content: end;
-    
 }
 
 .footer_content{
@@ -344,9 +424,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 2rem 2.5rem;
-    
 }
-
 #footer_contacts {
     margin-bottom: 0.75rem;
 }
@@ -394,26 +472,10 @@ footer{
 }
 
 /* Responsividade */
-@media screen and (max-width: 750px) {
-    #footer_content{
-        grid-template-columns: repeat(1,1fr);
-        gap: 2rem;
-    }
-}
-
-
-@media screen and (max-width: 426px) {
-    #footer_content{
-        display:grid;
-        padding: 3rem 2rem;
-    }
-}
-
-
 @media screen and (min-width: 1460px){
     /* navbar */
     #header{
-        padding: 60px 4%;
+        padding: 60px 1%;
     }
     #header.rolagem{
         padding-top: 20px;
@@ -424,7 +486,6 @@ footer{
     .nav ul li a{
         font-size: 23px;
     }
-    
 }
 
 @media screen and (min-width: 1281px){
@@ -446,6 +507,48 @@ footer{
         padding: 15px 0;
     }
     
+    /* principal */
+    #orcamento_main{
+        width: 80vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+    #orcamento_main h1{
+        font-size: 3.4rem;
+        margin-left: 10%;
+        line-height: 80px;
+    }
+    #orcamento_main button{
+        width: 280px;
+        height: 55px;
+        font-size: 1.6rem;
+        margin-left: 10%;
+        margin-top: 2.5rem;
+    }
+    #social_main{
+        bottom: 60px;
+        right: 40px;
+    }
+    #social_main label{
+        font-size: 1.2rem;
+        margin-right: 20px;
+    }
+    #social_main hr{
+        height:50px;
+    }
+    
+    #social_main img{
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+    }
+    #social_main img:hover{
+        width: 40px;
+        height: 40px;
+        transition: .2s;
+    }
 }
 
 @media screen and (max-width: 1115px){
@@ -461,89 +564,10 @@ footer{
     }
     #btn_menu{
         display: block;
-        z-index: 2;
     }
-    .logo{
-        width: 20rem;
-        height: 10rem;
-    }
-    .logo{
-        width: auto;
-        height: 110px;
-    }
-    
-}
-
-/*serviço*/
-
-@media screen and (max-width: 750px) {
-    #footer_content{
-        grid-template-columns: repeat(1,1fr);
-        gap: 2rem;
-    }
-}
-
-
-@media screen and (max-width: 426px) {
-    #footer_content{
-        display:grid;
-        padding: 3rem 2rem;
-    }
-}
-
-
-@media screen and (min-width: 1460px){
-    /* navbar */
-    #header{
-        padding: 60px 4%;
-    }
-    #header.rolagem{
-        padding-top: 20px;
-    }
-    .logo{
-        height: 130px;
-    }
-    .nav ul li a{
-        font-size: 23px;
-    }
-    
-}
-
-@media screen and (min-width: 1281px){
-    /* navbar */
-    #header{
-        padding: 40px 1%;
-    }
-}
-
-@media screen and (max-width: 1280px){
-    /* navbar */
-    #header{
-        padding: 40px 3%;
-    }
-    #container_tel{
-        display:none;
-    }
-    .nav ul li a{
-        padding: 15px 0;
-    }
-    
-}
-
-@media screen and (max-width: 1115px){
-    /* navbar */
-    .nav ul{
-        display: none;
-    }
-    #container_tel{
-        display:none;
-    }
-    #header{
-        padding: 40px 4%;
-    }
-    #btn_menu{
-        display: block;
-        z-index: 2;
+    .nav_mobile ul li a{
+        font-size: 2.5rem;
+        padding: 2rem 0;
     }
     .nav_mobile.abrir{
         visibility: visible;
@@ -553,10 +577,96 @@ footer{
         width: auto;
         height: 110px;
     }
+
+    /* principal */
+    #orcamento_main{
+        width: 80vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+    #orcamento_main h1{
+        font-size: 2.9rem;
+        line-height: 4rem;
+        margin-left: 10%;
+    }
+    #orcamento_main button{
+        width: 280px;
+        height: 55px;
+        border-radius: 40px;
+        font-size: 1.6rem;
+        margin-left: 10%;
+        margin-top: 2rem;
+        padding-right: 20px;
+    }
+    #social_main img{
+        margin-left: 20px;
+    }
+
     
 }
 
 @media screen and (max-width: 750px) {
+    /* nab bar */
+    .nav ul{
+        display: none;
+    }
+    #container_tel{
+        display:none;
+    }
+    #header{
+        padding: 40px 4%;
+    }
+    #btn_menu{
+        display: block;
+    }
+    .nav_mobile ul li a{
+        font-size: 2rem;
+        padding: 25px 0;
+    }
+    .nav_mobile.abrir{
+        visibility: visible;
+        height: 100vh;
+    }
+    .logo{
+        width: auto;
+        height: 110px;
+    }
+
+    /* principal */
+    #orcamento_main{
+        width: 80vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+    #orcamento_main h1{
+        font-size: 2rem;
+        line-height: 2.6rem;
+        margin-left: 10%;
+    }
+    #orcamento_main button{
+        width: 270px;
+        height: 50px;
+        border-radius: 40px;
+        font-size: 1.3rem;
+        margin-left: 10%;
+        margin-top: 2rem;
+        padding-right: 20px;
+    }
+    #social_main label{
+        display: none;
+    }
+    #social_main hr{
+        display: none;
+    }
+    #social_main img{
+        margin-left: 20px;
+    }
+
+    /* footer */
     .footer_content{
         grid-template-columns: repeat(1,1fr);
         gap: 2rem;
@@ -565,8 +675,54 @@ footer{
 
 
 @media screen and (max-width: 426px) {
+    /* navbar */
+    .nav_mobile ul li a{
+        font-size: 1.5rem;
+        padding: 25px 0;
+    }
+
+    /* princiapl */
+    #orcamento_main{
+        width: 80vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+    #orcamento_main h1{
+        font-size: 1.7rem;
+        line-height: 2.6rem;
+        margin-left: 10%;
+    }
+    #orcamento_main button{
+        width: 270px;
+        height: 50px;
+        border-radius: 40px;
+        font-size: 1.3rem;
+        margin-left: 10%;
+        margin-top: 2rem;
+        padding-right: 20px;
+    }
+    #social_main label{
+        display: none;
+    }
+    #social_main hr{
+        display: none;
+    }
+    #social_main img{
+        display: none;
+    }
+
+    /* rodapé */
     .footer_content{
         display:grid;
         padding: 3rem 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) and (min-height: 900px) {
+    /* navbar */
+    .nav_mobile ul li a{
+        font-size: 1.9rem;
     }
 }
