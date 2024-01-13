@@ -555,3 +555,18 @@ footer{
     }
     
 }
+
+@media screen and (max-width: 750px) {
+    .footer_content{
+        grid-template-columns: repeat(1,1fr);
+        gap: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 426px) {
+    .footer_content{
+        display:grid;
+        padding: 3rem 2rem;
+    }
+}
