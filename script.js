@@ -18,6 +18,7 @@ function animarMenu(){
 
 // Seleciona a div de fundo_caixa
 const info = document.querySelector('.fundo_caixa');
+info.style.pointerEvents = 'none';
 
 // Adiciona um evento de clique à div de fundo_caixa
 info.addEventListener('click', abrirInfos);
@@ -32,7 +33,9 @@ function abrirInfos() {
 
     // Torna a classe 'fundo_caixa' visível ou invisível
     info.classList.toggle('visivel');
+    
 }
+
 
 const informacoesDiv = document.getElementById('informacoesDiv');
 
@@ -49,7 +52,7 @@ function abrirInfos(tipo) {
         case 'Restauração':
             return{
                 titulo:'RESTAURAÇÃO',
-                descricao: 'É fundamental seguir com rigor todas as etapas da restauração para garantir por muito mais tempo a conservação do prédio e o aspecto novo da pintura. Antes de mais nada é feito uma limpeza nas fachadas para identificar todas as anomalias a serem corrigidas, como trincas e fissuras, rebocos soltos ou desplacados. Tudo isso para garantir a conservação do seu patrimônio e a qualidade da pintura por muito mais tempo. Nós GARANTIMOS, restauramos de Verdade!',
+                descricao: 'Para assegurar a durabilidade da conservação do prédio e a frescura da pintura por mais tempo, é essencial seguir rigorosamente todas as etapas da restauração. Inicialmente, realiza-se uma limpeza nas fachadas para identificar anomalias, como trincas, fissuras, rebocos soltos ou desplacados. Isso garante a preservação do patrimônio e a qualidade da pintura. Nossa garantia: restauração genuína!',
                 imagem: 'img/restauracao.jpg'
             };
         case 'Hidrojateamento':
@@ -70,6 +73,8 @@ function abrirInfos(tipo) {
       
       const informacoes = obterInformacoes(tipo);
       // Criar uma estrutura HTML com base nas informações obtidas
+
+            
       const conteudoHTML = `
 
           <div id="InformacoesDiv">
@@ -79,7 +84,7 @@ function abrirInfos(tipo) {
           <!-- Exemplo de imagem -->
           <img id= "img-infos"src="${informacoes.imagem}" alt="${informacoes.titulo}">
 
-          <button id= "voltar">Voltar</button>
+          <button onclick= "fecharInfos()" id="voltar">Voltar</button>
           </div>
       `;
   
@@ -87,6 +92,15 @@ function abrirInfos(tipo) {
       informacoesDiv.innerHTML = conteudoHTML;
   
       // Mostrar a div de informações
-      informacoesDiv.style.display = 'block';
+      informacoesDiv.style.opacity = '1';
+      info.style.pointerEvents = 'auto';
+      const btn_voltar = document.querySelector("#voltar")
+
+            btn_voltar.addEventListener('click', fecharInfos)
+            function fecharInfos(){
+                informacoesDiv.style.opacity = '0';
+                info.style.pointerEvents = 'none';
+            }
+
 }
 

@@ -373,7 +373,7 @@
     background-color: #fff;
     margin-inline: 1rem;
     border-radius: 2rem;
-    box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5), 0 -15px 15px -15px rgba(0, 0, 0, 0.5);;
+    box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5), 0 -15px 15px -15px rgba(0, 0, 0, 0.5);
     transition: 0.5s;
     background-size: cover;
    
@@ -398,7 +398,7 @@
     background-size: cover;
     filter: blur(25px);
     opacity: 0.5;
-    z-index:1
+    z-index:2
 
 }
 .imagens .caixa:hover::before{
@@ -410,7 +410,7 @@
     position: absolute;
     top: 90%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     color: #fff;
     font-size: 20px;
     font-family: 'Barlow SemiCondensed Bold';
@@ -426,47 +426,33 @@
 
 
 .fundo_caixa{
-    display: none; /* Inicia invisível */
-    position: fixed; /* Mantém a posição fixa na tela */
-    width: 1200px;
+    opacity: 0;
+    transition: .5s ease, pointer-events 0s 0.5s;
+    width: 1100px;
     height: 600px;
-    margin-inline: 1rem;
     border-radius: 2rem;
-    transition: .5s;
-    background-color: var(--bege);
-    opacity: 1;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    top:-60%;
-   transition: 0.5s ease;
-   z-index: 1000;
- 
+    position:relative;
+    top:-55%;
+    left: 21%;
+    z-index: 5;
+    box-shadow: 15px 0px 15px -5px rgba(0, 0, 0, 0.3), -15px 0px 15px -5px rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(10px); /* Aplica um desfoque de 10 pixels no fundo */
+    backdrop-filter: blur(10px); 
+    background-color: rgba(214, 214, 214, 0.7); /* Define uma cor de fundo com transparência */
+    padding: 2rem;
 }
 
 .fundo_caixa .visivel{
-    display: block;
-
+    opacity: 1;
 }
 
-.caixa.visivel {
-    display: block; /* Torna visível quando a classe 'visivel' é adicionada */
-    transition: 0.5s ease;
-}
-#informacoesDiv {
-    width: 1100px;
-    height: 600px;
-    font-size: 20px;
-    position: relative;
-   background-color: #f79126;
-    padding: 2rem ;
-    left: 50%;
-    transform: translate(-50%);
+.caixa .visivel{
+    opacity: 1;
 
 }
 
 #informacoesDiv h1{
-    font-size: 27px;
+    font-size: 25px;
     color: #545454;
     text-align:left;
     margin-left: 8rem;
@@ -479,20 +465,42 @@
     font-family:'Barlow SemiCondensed Bold' ;
     font-size: 50px;
     color: #545454;
-    margin-left: 50%;
     position: relative;
-    margin-top: 2rem;
-
+    top: 2rem;
+    left:42%;
+    
 }
+
 
 #img-infos {
     width: 400px;
     height: 550px;
     padding:1rem;
     border-radius: 2rem;
-    margin-top:-10% ;
+    margin-top:-7% ;
     
+}
+
+#voltar{
+    width: auto;
+    height: auto;
+    padding-block: 0.5rem;
+    padding-inline: 2rem;
+    background-color: var(--cinza-medio);
+    color: var(--cinza);
+    border-radius: 2rem;
+    font-size: 25px;
+    font-family:'Barlow Condensed Bold' ;
+    border-style: none;
+    position: relative;
+    left: 50%;
+    cursor: pointer;
     
+}
+
+#voltar:hover{
+    opacity: 0.5;
+    transition: 0.3s ease;
 }
 
 /* sobre nós */
