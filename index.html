@@ -70,18 +70,23 @@
     <section class="servicos">
         <h1>SERVIÇOS</h1>
         <div id="fundo_servicos"></div>
+
         <div class="imagens">
-            <div class="caixa" style="background-image: url('img/pintura.jpg')"> <div class="fundo_caixa"></div></div>
-            <div class="caixa" style="background-image: url(img/restauracao.jpg);"><div class="fundo_caixa"></div> </div>
-            <div class="caixa" style="background-image: url(img/hidro.png);"> <div class="fundo_caixa"></div></div>
-            <div class="caixa" style="background-image: url(img/imperbeabilizazao.jpg);"> <div class="fundo_caixa"></div></div>
+            <div class="caixa visivel" style="background-image: url('img/pintura.jpg')" onclick="abrirInfos('Pintura')"> <span class="titulo-img">PINTURA</span></div>
+            <div class="caixa visivel" style="background-image: url('img/restauracao.jpg')" onclick="abrirInfos('Restauração')"> <span class="titulo-img">RESTAURAÇÃO</span></div>
+            <div class="caixa visivel" style="background-image: url('img/hidro.png')" onclick="abrirInfos('Hidrojateamento')"><span class="titulo-img"> HIDROJATEAMENTO</span> </div>
+            <div class="caixa visivel" style="background-image: url('img/Impermeabilização.jpg')" onclick="abrirInfos('Impermeabilização')"> <span class="titulo-img">IMPERMEABILIZAÇÃO</span></div>   
+            </div> 
+            
+
+            
+  <div id="informacoesDiv" class="fundo_caixa visivel">
+    <!-- Conteúdo da div de informações -->
+  </div>
+
         </div>
-        <div class="imagens">
-            
-       
-            
-            
-        </div>
+
+        
             
             
     </section>
