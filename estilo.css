@@ -75,7 +75,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 7;
 }
 
 #header.rolagem{
@@ -112,16 +112,109 @@
     transition: .5s;
 }
 
-.banner {
-    background-position: 100% 0;
-}
-
+/* principal */
 .banner video{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
     object-fit: cover;
+}
+#sombra_superior{
+    width: 100%;
+    height: 50vh;
+    background-color: linear-gradient(180deg, black, #353434, #505050, #d9d9d9);
+    opacity: 60%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+#sombra_esquerda{
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(to right, black, #353434, #505050, #d9d9d9);
+    opacity: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#orcamento_main{
+    width: 45vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+#orcamento_main h1{
+    font-family: 'Barlow SemiCondensed Bold';
+    font-size: 3rem;
+    color: var(--white);
+    text-align: left;
+    text-shadow: black 0.1em 0.1em 0.4em;
+    line-height: 80px;
+    margin-top: 33vh;
+    margin-left: 15%;
+}
+#orcamento_main button{
+    width: 275px;
+    height: 60px;
+    background: linear-gradient(90deg, #ff6c10,#ff6c10, #ebbc00);
+    border: 0px;
+    border-radius: 40px;
+    font-family: 'Barlow SemiCondensed Bold';
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--white);
+    margin-top: 2.5rem;
+    margin-left: 15%;
+    padding-right: 20px;
+    cursor: pointer;
+}
+#orcamento_main button:hover{
+    width: 280px;
+    height: 65px;
+    background: linear-gradient(90deg, #ebbc00,#ff6c10,#ff6c10);
+    transition: 0.5s;
+}
+#sombra_direita{
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left, black, #353434, #505050, #d9d9d9);
+    opacity: 60%;
+    z-index: 1;
+}
+#social_main{
+    position:absolute;
+    bottom: 40px;
+    right: 20px;
+    display: flex;
+    z-index: 4;
+    align-items: center;
+}
+#social_main label{
+    font-family: 'Open Sauce';
+    font-size: 1rem;
+    color: var(--white);
+    margin-right: 10px;
+}
+#social_main hr{
+    height:40px;
+}
+
+#social_main img{
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+#social_main img:hover{
+    width: 40px;
+    height: 40px;
+    transition: .2s;
 }
 
 .logo{
@@ -164,6 +257,8 @@
     background: transparent;
     border-color: transparent;
     cursor: pointer;
+    display: none;
+    z-index: 8;
 }
 .linha{
     width: 35px;
@@ -175,10 +270,6 @@
     position: relative;
     transform-origin: center;
     transition: .2s;
-}
-
-#btn_menu{
-    display: none;
 }
 #btn_menu.hamburguer .linha:nth-child(1) {
     transform: translateY(13px) rotate(-45deg);
@@ -213,7 +304,7 @@
 }
 .nav_mobile ul li a{
     font-family: 'Barlow Bold';
-    font-size: 30px;
+    font-size: 1.5rem;
     color: var(--white);
     text-decoration: none;
     display:inline-flex;
@@ -404,13 +495,86 @@
     
 }
 
+/* sobre nós */
+.espaco{
+    background-color: var(--cinza);
+    height: 100vh;
+}
+.flex-sobre{
+    display:flex;
+}
+#sobre_nos{
+    width: 100%;
+    padding-top: 20vh;
+    background-image: url(img/fundo.png);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#sobre_conteudo{
+    padding-right: 2%;
+    padding-bottom: 4rem;
+    margin-left: 8%;
+}
+#sobre_conteudo h1{
+    font-family: 'Barlow SemiCondensed Bold';
+    font-size: 3.75rem;
+    color: var(--laranja);
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.247) 0.1em 0.1em 0.25em;
+    margin-bottom: 2rem;
+}
+#sobre_conteudo p{
+    font-family: 'Barlow Regular';
+    font-size: 1.7rem;
+    line-height: 1.4em;
+    text-align: left;
+}
+#sobre_img{
+    margin-left: 3.2rem;
+    padding: 10px 160px 20px 40px;
+}
+#sobre_img h1{
+    display: none;
+}
+#sobre_img img{
+    width: 340px;
+}
+.flex-sobre-b{
+    display: flex;
+    justify-content: space-between;
+    margin: 10vh 0 0 0;
+    padding: 0 10vw;
+}
+#sobre_beneficios{
+    width: 300px;
+}
+#sobre_beneficios h2{
+    font-family: 'Barlow SemiCondensed Bold';
+    font-size: 3.25rem;
+    color: var(--laranja);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#sobre_beneficios h3{
+    font-family: 'Open Sans Bold';
+    font-size: 2.27rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.247) 0.1em 0.1em 0.25em;
+}
+#sombra-inferior_sobre{
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(to top, black, black,#313131,#545454, #d9d9d9, #d9d9d9,#ffffff);
+    opacity: 60%;
+}
+
 /** rodapé **/
 footer{
     width: 100%;
     color: var(--white);
     font-family: 'Barlow Regular';
     justify-content: end;
-    
 }
 
 .footer_content{
@@ -418,9 +582,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 2rem 2.5rem;
-    
 }
-
 #footer_contacts {
     margin-bottom: 0.75rem;
 }
@@ -468,12 +630,10 @@ footer{
 }
 
 /* Responsividade */
-
-
 @media screen and (min-width: 1460px){
     /* navbar */
     #header{
-        padding: 60px 4%;
+        padding: 60px 1%;
     }
     #header.rolagem{
         padding-top: 20px;
@@ -484,7 +644,39 @@ footer{
     .nav ul li a{
         font-size: 23px;
     }
-    
+
+    /* sobre nos */
+    #sobre_nos{
+        padding-top: 5vh;
+    }
+    #sobre_conteudo{
+        padding-block: 2rem;
+        margin-left: 8%;
+    }
+    #sobre_conteudo p{
+        font-size: 2.3vw;
+    }
+    #sobre_img{
+        width: 100%;
+        padding: 8vh 4%;
+        margin: 0;
+    }
+    #sobre_img img{
+        width: 35vw;
+    }
+    #sobre_beneficios{
+        max-width: 350px;
+        width:auto;
+        margin: 0 2.5vw;
+        text-align: center;
+    }
+    #sobre_beneficios h2{
+        font-size: 3.8vw;
+        margin: 0;
+    }
+    #sobre_beneficios h3{
+        font-size: 3.1vw;
+    }
 }
 
 @media screen and (min-width: 1281px){
@@ -506,6 +698,72 @@ footer{
         padding: 15px 0;
     }
     
+    /* principal */
+    #orcamento_main{
+        width: 80vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+    #orcamento_main h1{
+        font-size: 3.4rem;
+        margin-left: 10%;
+        line-height: 80px;
+    }
+    #orcamento_main button{
+        width: 280px;
+        height: 55px;
+        font-size: 1.6rem;
+        margin-left: 10%;
+        margin-top: 2.5rem;
+    }
+    #social_main{
+        bottom: 60px;
+        right: 40px;
+    }
+    #social_main label{
+        font-size: 1.2rem;
+        margin-right: 20px;
+    }
+    #social_main hr{
+        height:50px;
+    }
+    
+    #social_main img{
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+    }
+    #social_main img:hover{
+        width: 40px;
+        height: 40px;
+        transition: .2s;
+    }
+
+    /* sobre nos */
+    #sobre_nos{
+        padding-top: 5vh;
+    }
+    #sobre_conteudo{
+        padding-block: 2rem;
+        margin-left: 8%;
+    }
+    #sobre_img{
+        width: 100%;
+        padding: 8vh 4%;
+        margin: 0;
+    }
+    .flex-sobre-b{
+        padding: 0 8%;
+        margin: 5vh 0;
+        align-content: space-between;
+    }
+    #sobre_beneficios{
+        max-width: 300px;
+        width:auto;
+        margin: 0 2.5vw;
+    }
 }
 
 @media screen and (max-width: 1115px){
@@ -521,7 +779,6 @@ footer{
     }
     #btn_menu{
         display: block;
-        z-index: 2;
     }
     .logo{
         width: 20rem;
@@ -587,6 +844,9 @@ footer{
     #btn_menu{
         display: block;
         z-index: 2;
+    .nav_mobile ul li a{
+        font-size: 2.5rem;
+        padding: 2rem 0;
     }
     .nav_mobile.abrir{
         visibility: visible;
@@ -596,12 +856,194 @@ footer{
         width: auto;
         height: 110px;
     }
+
+    /* principal */
+    #orcamento_main{
+        width: 80vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+    #orcamento_main h1{
+        font-size: 2.9rem;
+        line-height: 4rem;
+        margin-left: 10%;
+    }
+    #orcamento_main button{
+        width: 280px;
+        height: 55px;
+        border-radius: 40px;
+        font-size: 1.6rem;
+        margin-left: 10%;
+        margin-top: 2rem;
+        padding-right: 20px;
+    }
+    #social_main img{
+        margin-left: 20px;
+    }
+
+    /* sobre nos */
+    #sobre_nos{
+        padding: 0;
+    }
+    #sobre_conteudo{
+        padding-block: 2rem;
+        margin-left: 8%;
+    }
+    #sobre_conteudo p{
+        font-size: 2.75vw;
+    }
+    #sobre_img{
+        width: 100%;
+        padding: 8vh 4%;
+        margin: 0;
+    }
+    #sobre_img img{
+        width: 35vw;
+    }
+    .flex-sobre-b{
+        padding: 0 8%;
+        margin: 5vh 0;
+        align-content: space-between;
+    }
+    #sobre_beneficios{
+        max-width: 300px;
+        width:auto;
+        margin: 0 2.5vw;
+    }
+    #sobre_beneficios h2{
+        font-size: 5vw;
+        margin: 0;
+    }
+    #sobre_beneficios h3{
+        font-size: 3.5vw;
+    }
+
     
 }
-
+}
 /*footer*/
 
 @media screen and (max-width: 750px) {
+    /* nab bar */
+    .nav ul{
+        display: none;
+    }
+    #container_tel{
+        display:none;
+    }
+    #header{
+        padding: 40px 4%;
+    }
+    #btn_menu{
+        display: block;
+    }
+    .nav_mobile ul li a{
+        font-size: 2rem;
+        padding: 25px 0;
+    }
+    .nav_mobile.abrir{
+        visibility: visible;
+        height: 100vh;
+    }
+    .logo{
+        width: auto;
+        height: 110px;
+    }
+
+    /* principal */
+    #orcamento_main{
+        width: 80vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+    #orcamento_main h1{
+        font-size: 2rem;
+        line-height: 2.6rem;
+        margin-left: 10%;
+    }
+    #orcamento_main button{
+        width: 270px;
+        height: 50px;
+        border-radius: 40px;
+        font-size: 1.3rem;
+        margin-left: 10%;
+        margin-top: 2rem;
+        padding-right: 20px;
+    }
+    #social_main label{
+        display: none;
+    }
+    #social_main hr{
+        display: none;
+    }
+    #social_main img{
+        margin-left: 20px;
+    }
+
+    /* sobre nos */
+    .flex-sobre{
+        flex-direction: column-reverse;
+    }
+    #sobre_nos{
+        padding: 0;
+    }
+    #sobre_conteudo{
+        padding-block: 2rem;
+        margin: 0;
+    }
+    #sobre_conteudo h1{
+        display: none;
+    }
+    #sobre_conteudo p{
+        font-size: 1.4rem;
+        margin-inline: 8%;
+    }
+    #sobre_img{
+        width: 100%;
+        padding: 0 8%;
+        margin: 0;
+    }
+    #sobre_img h1{
+        display: block;
+        font-family: 'Barlow SemiCondensed Bold';
+        color: var(--laranja);
+        font-size: 2.4rem;
+        text-align: center;
+        text-shadow: rgba(0, 0, 0, 0.247) 0.1em 0.1em 0.25em;
+        margin: 2rem 0;
+    }
+    #sobre_img img{
+        width: 50vw;
+    }
+    .flex-sobre-b{
+        flex-direction: column;
+        padding: 0 5vw;
+        align-items: center;
+
+    }
+    #sobre_beneficios{
+        width: auto;
+        margin-bottom: 3rem;
+        align-items: center;
+    }
+    #sobre_beneficios h2{
+        font-size: 3rem;
+        margin-bottom: .5rem;
+    }
+    #sobre_beneficios h3{
+        font-size: 2rem;
+        max-width: 335px;
+        width: auto;
+        margin-inline: auto;
+    }
+    
+
+
+    /* footer */
     .footer_content{
         grid-template-columns: repeat(1,1fr);
         gap: 2rem;
@@ -610,8 +1052,109 @@ footer{
 
 
 @media screen and (max-width: 426px) {
+    /* navbar */
+    .nav_mobile ul li a{
+        font-size: 1.5rem;
+        padding: 25px 0;
+    }
+
+    /* princiapl */
+    #orcamento_main{
+        width: 80vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+    #orcamento_main h1{
+        font-size: 1.7rem;
+        line-height: 2.6rem;
+        margin-left: 10%;
+    }
+    #orcamento_main button{
+        width: 270px;
+        height: 50px;
+        border-radius: 40px;
+        font-size: 1.3rem;
+        margin-left: 10%;
+        margin-top: 2rem;
+        padding-right: 20px;
+    }
+    #social_main label{
+        display: none;
+    }
+    #social_main hr{
+        display: none;
+    }
+    #social_main img{
+        display: none;
+    }
+
+    /* sobre nos */
+    .flex-sobre{
+        flex-direction: column-reverse;
+    }
+    #sobre_nos{
+        padding: 0;
+    }
+    #sobre_conteudo{
+        padding-block: 2rem;
+        margin: 0;
+    }
+    #sobre_conteudo h1{
+        display: none;
+    }
+    #sobre_conteudo p{
+        font-size: 1.15rem;
+        margin-inline: 8%;
+    }
+    #sobre_img{
+        width: 100%;
+        padding: 0 8%;
+        margin: 0;
+    }
+    #sobre_img h1{
+        display: block;
+        font-family: 'Barlow SemiCondensed Bold';
+        color: var(--laranja);
+        font-size: 2.2rem;
+        text-align: center;
+        text-shadow: rgba(0, 0, 0, 0.247) 0.1em 0.1em 0.25em;
+        margin: 2rem 0;
+    }
+    #sobre_img img{
+        width: 250px;
+    }
+    .flex-sobre-b{
+        flex-direction: column;
+        padding: 0 5vw;
+    }
+    #sobre_beneficios{
+        width: auto;
+        margin-bottom: 3rem;
+        align-items: center;
+    }
+    #sobre_beneficios h2{
+        font-size: 3rem;
+        margin-bottom: .5rem;
+    }
+    #sobre_beneficios h3{
+        font-size: 2rem;
+        max-width: 335px;
+        width: auto;
+        margin-inline: auto;
+    }
+
+    /* rodapé */
     .footer_content{
         display:grid;
         padding: 3rem 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) and (min-height: 900px) {
+    /* navbar */
+    .nav_mobile ul li a{
+        font-size: 1.9rem;
     }
 }
