@@ -24,9 +24,9 @@
                 <nav class="nav">
                     <ul>
                         <li><a href="#">home</a></li>
-                        <li><a href="#">serviços</a></li>
+                        <li><a href="#servicos">serviços</a></li>
                         <li><a href="#sobre_nos">quem somos</a></li>
-                        <li><a href="#">destaques</a></li>
+                        <li><a href="#destaques">destaques</a></li>
                         <li><a href="#">portifólio</a></li>
                         <li><a href="#">contato</a></li>
                     </ul>
@@ -46,9 +46,9 @@
                 <nav class="nav_mobile" id="nav_mobile">
                     <ul>
                         <li><a href="#">home</a></li>
-                        <li><a href="#">serviços</a></li>
+                        <li><a href="#servicos">serviços</a></li>
                         <li><a href="#sobre_nos">quem somos</a></li>
-                        <li><a href="#">destaques</a></li>
+                        <li><a href="#destaques">destaques</a></li>
                         <li><a href="#">portifólio</a></li>
                         <li><a href="#">contato</a></li>
                     </ul>
@@ -64,7 +64,7 @@
         </video>
         <div id="orcamento_main">
             <h1>A melhor solução para o seu condomínio!</h1>
-            <a href="#"><button>Orçamento Gratuito </button></a>
+            <a href="#"><button>Orçamento Gratuito <img src="img/setinha.png"></button></a>
         </div>
 
         <div id="social_main">
@@ -81,8 +81,7 @@
 
 
     <!--Sessão Serviços-->
-   
-    <section class="servicos">
+    <section id="servicos">
         <h1>SERVIÇOS</h1>
         <div id="fundo_servicos"></div>
 
@@ -98,22 +97,19 @@
             </div>
 
         </div>
-
     </section>
    
     <!--Sessão Sobre Nós-->
-
     </section>
     <section id="sobre_nos">
         <div class="flex-sobre">
             <div id="sobre_conteudo">
                 <h1>QUEM SOMOS</h1>
-                <p>Uma história é construída ao longo do tempo com trabalho duro, persistência e paciência. E foi assim que tudo começou, do zero, mas tijolo a tijolo estamos a mais de 20 anos construindo nossa história com colaboradores qualificados que cooperando entre si, buscam a excelência a cada dia, para entregar aos nossos clientes o</p>
-                <p>Melhor Serviço com toda a Segurança e Garantia</p>
+                <p>Uma história é construída ao longo do tempo com trabalho duro, persistência e paciência. E foi assim que tudo começou, do zero, mas tijolo a tijolo estamos a mais de 20 anos construindo nossa história com colaboradores qualificados que cooperando entre si, buscam a excelência a cada dia, para entregar aos nossos clientes o Melhor Serviço com toda a Segurança e Garantia</p>
             </div>
             <div id="sobre_img">
                 <h1>QUEM SOMOS</h1>
-                <img src="img/teste.png">
+                <img src="img/moca.png">
             </div>
         </div>
         <div class="flex-sobre-b">
@@ -134,7 +130,52 @@
     </section>
 
     <!--Sessão Destaques-->
+    <section id="destaques">
+        <div id="fund_dest_light"></div>
+        <div id="fund_dest_dark"></div>
+        
+        <div id="titulos_dest">
+            <h1 id="normal1">DESTAQUES</h1>
+            <h1 id="vazado1">DESTAQUES</h1>
+            <h1 id="vazado2">DESTAQUES</h1>
+            <h1 id="normal2">DESTAQUES</h1>
+        </div>
+        <div id="titulos_dest2">
+            <h1 id="normal">DESTAQUES</h1>
+            <div id="vlinha1">
+                <h1 id="vazado-1">DESTAQUES</h1>
+                <h1>DESTAQUES</h1>
+            </div>
+            <div id="vlinha2">
+                <h1 id="vazado-2">DESTAQUES</h1>
+                <h1>DESTAQUES</h1>
+            </div>
+        </div>
 
+        <div id="blocos_dest">
+            <div class="bloco" id="fund_altura">
+                <div class="conteudo_dest" id="img_altura" src="img/hidrojateamento3.jpg"></div>
+                <h2 class="txt_blocos">Reparos em altura</h2>
+                <p>Oferecemos serviço emergencial de restaurações. Nosso objetivo é resolver os problemas urgentes dos nossos clientes no menor tempo possível com custo acessível a todos.</p>
+                <p>Pequenos reparos em altura, tratamento de trincas, reposição de pastilhas, texturas e etc</p>
+                <img class="seta_dest" src="img/seta_laranja.png" onclick="expandirDest('fund_altura')" name="seta_dest">
+            </div>
+            <div class="bloco" id="fund_garagem">
+                <div class="conteudo_dest2" id="img_garagem" src="img/hidrojateamento3.jpg"></div>
+                <h2 class="txt_blocos">Pinturas em garagem</h2>
+                <p>Oferecemos serviço emergencial de restaurações. Nosso objetivo é resolver os problemas urgentes dos nossos clientes no menor tempo possível com custo acessível a todos.</p>
+                <p>Pequenos reparos em altura, tratamento de trincas, reposição de pastilhas, texturas e etc</p>
+                <img class="seta_dest" src="img/seta_laranja.png" onclick="expandirDest('fund_garagem')" name="seta_dest">
+            </div>
+            <div class="bloco" id="fund_quadra">
+                <div class="conteudo_dest" id="img_quadra" src="img/hidrojateamento3.jpg"></div>
+                <h2 class="txt_blocos">Pinturas em quadras</h2>
+                <p>Oferecemos serviço emergencial de restaurações. Nosso objetivo é resolver os problemas urgentes dos nossos clientes no menor tempo possível com custo acessível a todos.</p>
+                <p>Pequenos reparos em altura, tratamento de trincas, reposição de pastilhas, texturas e etc</p>
+                <img class="seta_dest" src="img/seta_laranja.png" onclick="expandirDest('fund_quadra')" name="seta_dest">
+            </div>
+        </div>
+    </section>
 
     <!--Sessão Portifólio-->
 

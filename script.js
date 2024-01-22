@@ -104,3 +104,16 @@ function abrirInfos(tipo) {
 
 }
 
+/*Compotamento caixas destaques */
+function expandirDest(id) {
+    const blocos = document.querySelectorAll('.bloco');
+
+    blocos.forEach(bloco => {
+        if (bloco.id === id) {
+            bloco.classList.toggle('expandido');
+        } else {
+            bloco.classList.remove('expandido');
+        }
+    });
+}  
+
