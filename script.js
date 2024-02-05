@@ -16,73 +16,69 @@ function animarMenu(){
     menuDiv.classList.toggle('abrir')
 }
 
-// Seleciona a div de fundo_caixa
+// Serviços
+
 const info = document.querySelector('.fundo_caixa');
 info.style.pointerEvents = 'none';
 
-// Adiciona um evento de clique à div de fundo_caixa
-info.addEventListener('click', abrirInfos);
+info.addEventListener('click', abrirInfosClicado);
 
 // Função para abrir ou fechar as informações
-function abrirInfos() {
-    // Seleciona a div com a classe 'caixa'
+function abrirInfosClicado() {
     const img = document.querySelector('.caixa');
-    
-    // Torna a classe 'caixa' visível ou invisível
     img.classList.toggle('visivel');
-
-    // Torna a classe 'fundo_caixa' visível ou invisível
     info.classList.toggle('visivel');
-    
 }
 
+function fecharInfos(){
+    informacoesDiv.style.opacity = '0';
+    info.style.pointerEvents = 'none';
+}
 
 const informacoesDiv = document.getElementById('informacoesDiv');
 
+
 function abrirInfos(tipo) {
     function obterInformacoes(tipo) {
-    switch(tipo){
-        case 'Pintura': {
-            return{
-                titulo:'PINTURA',
-                descricao: 'Executamos com critério todas as etapas de tratamento e preparação antes da pintura, assim podemos garantir a qualidade e eficácia dos nossos serviços. Nosso compromisso é com você! Profissionais qualificados, material de alto padrão de qualidade (Premium). Qualidade Garantida!',                
-                imagem: 'img/pintura.jpg'
-            };
-        }
-        case 'Restauração':
-            return{
-                titulo:'RESTAURAÇÃO',
-                descricao: 'Para assegurar a durabilidade da conservação do prédio e a frescura da pintura por mais tempo, é essencial seguir rigorosamente todas as etapas da restauração. Inicialmente, realiza-se uma limpeza nas fachadas para identificar anomalias, como trincas, fissuras, rebocos soltos ou desplacados. Isso garante a preservação do patrimônio e a qualidade da pintura. Nossa garantia: restauração genuína!',
-                imagem: 'img/restauracao.jpg'
-            };
-        case 'Hidrojateamento':
-            return{
-                titulo:'HIDROJATEAMENTO',
-                descricao: 'Com uma equipe altamente capacitada e experiente, a Max New atua de forma eficiente e segura, garantindo a remoção eficaz de resíduos, detritos e incrustações em fachadas prediais. Seja para preparação de superfícies antes da aplicação de revestimentos ou remoção de concreto endurecido, a empresa oferece soluções personalizadas para atender às necessidades específicas de cada cliente.',
-                imagem:'img/hidro.png'
-            };
-        case 'Impermeabilização':
-            return{
-                titulo: 'IMPERMEABILIZAÇÃO',
-                descricao:'A impermeabilização em fachadas protege edifícios contra danos causados por clima e umidade, prevenindo infiltrações e danos estruturais. Essa prática mantém a integridade do prédio, contribui para sua durabilidade, reduzindo riscos de corrosão e mofo, e assegura um ambiente interno mais seguro e saudável.',
-                imagem:'img/Impermeabilização.jpg'
-            };
-    }
-}
-      // Obter informações específicas para o tipo atual
-      
-      const informacoes = obterInformacoes(tipo);
-      // Criar uma estrutura HTML com base nas informações obtidas
-
+        switch(tipo){
+            case 'Pintura':
+                return{
+                    titulo:'PINTURA',
+                    descricao: 'Executamos com critério todas as etapas de tratamento e preparação antes da pintura, assim podemos garantir a qualidade e eficácia dos nossos serviços. Nosso compromisso é com você! Profissionais qualificados, material de alto padrão de qualidade (Premium). Qualidade Garantida!',                
+                    imagem: 'img/pintura.jpg'
+                };
             
-      const conteudoHTML = `
+            case 'Restauração':
+                return{
+                    titulo:'RESTAURAÇÃO',
+                    descricao: 'Para assegurar a durabilidade da conservação do prédio e a frescura da pintura, seguimos rigorosamente todas as etapas de restauração. Inicialmente, realizamos limpeza nas fachadas para identificar trincas, fissuras, rebocos soltos. Isso preserva o patrimônio e a qualidade da pintura. Compromisso: restauração genuína',
+                    imagem: 'img/restauracao.jpg'
+                };
+            case 'Hidrojateamento':
+                return{
+                    titulo:'HIDROJATEAMENTO',
+                    descricao: 'A Max New, com equipe experiente, garante remoção eficaz de resíduos e detritos em fachadas prediais. Seja na preparação para revestimentos ou concreto endurecido, oferecemos soluções personalizadas, atendendo às necessidades de cada cliente com eficácia.',
+                    imagem:'img/hidro.png'
+                };
+            case 'Impermeabilização':
+                return{
+                    titulo: 'IMPERMEABILIZAÇÃO',
+                    descricao:'A impermeabilização em fachadas protege edifícios contra danos causados por clima e umidade, prevenindo infiltrações e danos estruturais. Essa prática mantém a integridade do prédio, contribui para sua durabilidade, reduzindo riscos de corrosão e mofo, e assegura um ambiente interno mais seguro e saudável.',
+                    imagem:'img/Impermeabilização.jpg'
+                };
+            }
+    }
+
+
+    const informacoes = obterInformacoes(tipo);
+    const conteudoHTML = `
 
           <div id="InformacoesDiv">
           <h2>${informacoes.titulo}</h2>
           <h1>${informacoes.descricao}</h1>
           
-          <!-- Exemplo de imagem -->
-          <img id= "img-infos"src="${informacoes.imagem}" alt="${informacoes.titulo}">
+          <!-- imagem -->
+          <div id= "img-infos" style="background-image: url(${informacoes.imagem})"></div>
 
           <button onclick= "fecharInfos()" id="voltar">Voltar</button>
           </div>
@@ -90,20 +86,23 @@ function abrirInfos(tipo) {
   
       // Atribuir o conteúdo HTML à div de informações
       informacoesDiv.innerHTML = conteudoHTML;
-  
+      
+      const btn_voltar = document.querySelector('#voltar');
+      btn_voltar.addEventListener('click', fecharInfos);
+      
+      
       // Mostrar a div de informações
       informacoesDiv.style.opacity = '1';
       info.style.pointerEvents = 'auto';
-      const btn_voltar = document.querySelector("#voltar")
-
-            btn_voltar.addEventListener('click', fecharInfos)
-            function fecharInfos(){
-                informacoesDiv.style.opacity = '0';
-                info.style.pointerEvents = 'none';
-            }
-
+     
+      
 }
 
+
+
+
+
+        
 /*Compotamento caixas destaques */
 function expandirDest(id) {
     const blocos = document.querySelectorAll('.bloco');
