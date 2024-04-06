@@ -489,6 +489,7 @@
     background-position: 100% 0;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 #sobre_conteudo{
     padding-right: 2%;
@@ -754,17 +755,9 @@
 
 #portifolio{
     height: 100vh;
-    background-image: url(img/fundo.png);
+    background-image: url(img/fundocomruido.png);
     background-size: cover;
 }
-
-#ruido_port{
-    width: auto;
-    height: 100vh;
-    background-image:  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(img/ruido.png);
-    z-index: 1;
-}
-
 
 #title_port{
     font-family:'Barlow Bold' ;
@@ -785,6 +778,167 @@
     top: 6rem;
     transform: rotate(-7deg);
     z-index: 2;
+}
+.references{
+    align-items: center;
+    justify-content: center;
+}
+.card .image-box{
+    height: 200px;
+}
+.card .image-box img{
+    height: 200px;
+}
+
+
+/*Contato*/
+
+#contato{
+    height: 100%;
+    width: 100%;
+    background-image: url(img/fundo.png);
+    background-size: contain;
+
+}
+
+#title-contato{
+    font-family: 'Barlow Condensed Bold';
+    color: #F79126;
+    text-align: center;
+    font-size: 6rem;
+    text-shadow: #545454;
+    opacity: 0.4;
+    text-shadow: rgba(0, 0, 0, 0.363) 0em 0rem 0.25em;
+}
+.contato1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+.content_contato{
+    border-radius: 14px;
+    width:100%;
+    max-width: 400px;
+
+}
+
+.content_contato h2{
+    font-family: 'Barlow Regular';
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.destacado_h2{
+    font-family: 'Barlow SemiCondensed Bold';
+    font-size: 1.7rem;
+    color: #ebbc00;
+}
+.form{
+    padding: 18px;
+}
+.form-content{
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-content input{
+    display:block;
+    width:100%;
+    border-radius: 1.5rem;
+    padding: 15px;
+    border: 1px solid #000000;
+    background-color: transparent;
+}
+
+.form-content ::placeholder{
+    font-family: 'Barlow Regular';
+    font-size: 16px;
+    color: #000000;
+}
+.form-content a{
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    visibility: hidden;
+    
+}
+
+.form-content textarea{
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 1rem;
+    background-color: transparent;
+    padding: 10px;
+    height: 100px;
+}
+
+.form button{
+    background-image: linear-gradient(to right, #FFD700, #FF6347);
+    color: #fff ;
+    width: 100%;
+    border-radius: 1.2rem;
+    padding: 10px;
+    border: 0;
+    font-size: 18px;
+   font-family: 'Barlow Bold';
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.form-content.error input{
+    border-color: #ff2b25;
+}
+
+.form-content.error a{
+    color: #ff2b25;
+    visibility: visible;
+}
+
+
+.blocos_contato{
+   margin-left: 5rem;
+   align-items: center;
+}
+
+
+#blococont{
+    padding-inline:15px;
+    padding-block: 3px;
+    background-color: #ECECEC;
+    border-radius: 40px;
+    margin:20px;
+    display: flex;
+    align-items: center;
+}
+
+#blococont h3{
+    font-family: 'Open Sans Regular';
+    font-size: 20px;
+    color: #454545;
+    margin-left: 10px;
+}
+
+.localizacao{
+    text-align: center;
+}
+
+.localizacao h2{
+    font-family: 'Open Sauce';
+    font-size: 15px;
+    color: #454545;
+    padding-bottom: 50px;
+}
+.localizacao iframe{
+    margin: 20px;
+    width:1000px;
+    height:350px;
+    border:0; 
+    allowfullscreen:"";
 }
 
 
