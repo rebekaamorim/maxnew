@@ -121,71 +121,7 @@ function expandirDest(id) {
     });
 }  
 
-/*Formulário*/
 
-const form = document.getElementById("form");
-const namecli = document.getElementById("namecli");
-const emailcli = document.getElementById("emailcli");
-const telcli = document.getElementById("telcli");
-const assunto = document.getElementById("assunto");
-
-form.addEventListener("submit", (event) =>{
-    event.preventDefault();
-    checkInputNomeCli();
-    checkInputEmailCli();
-    checkInputTelCli();
-    checkInputAssunto();
-})
-
-function checkInputNomeCli(){
-    const nomecliValue = namecli.value;
-    if(nomecliValue === ""){
-        errorInput(namecli, "Preencha o Nome!")
-    } else{
-        const formItem = namecli.parentElement;
-        formItem.className = "form-content";
-    }
-}
-
-function checkInputEmailCli(){
-    const emailValue = emailcli.value;
-
-    if(emailValue === ""){
-        errorInput(emailcli, "Preencha o E-mail!");
-    } else{
-        const formItem = emailcli.parentElement;
-        formItem.className = "form-content";
-    }
-}
-
-function checkInputTelCli(){
-    const telcliValue = telcli.value;
-    if(telcliValue === ""){
-        errorInput(telcli, "Preencha o Telefone!")
-    } else{
-        const formItem = telcli.parentElement;
-        formItem.className = "form-content";
-    }
-}
-
-function checkInputAssunto(){
-    const assuntoValue = assunto.value;
-    if(assuntoValue === ""){
-        errorInput(assunto, "Preencha o Assunto!")
-    } else{
-        const formItem = assunto.parentElement;
-        formItem.className = "form-content";
-    }
-}
-
-
-function errorInput(input, message){
-    const formItem = input.parentElement;
-    const textMessage = formItem.querySelector("a")
-
-    textMessage.innerText = message;
-    formItem.className = "form-content error";
-}
 
 // parte do portifólio
 
