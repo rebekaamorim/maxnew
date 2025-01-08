@@ -73,7 +73,8 @@
     top: 0;
     left: 0;
     z-index: 7;
-  
+    background: transparent;
+    transition: all 0.5s ease;
 }
 #header.rolagem{
     /*background: linear-gradient(to bottom, #545454,#545454,#454545, #373737, #373737, transparent);*/
@@ -161,7 +162,14 @@
     visibility:hidden;
     transition: 1s easy out;
     z-index: 7;
+    
 }
+
+.nav_mobile.hidden {
+    transform: translateY(-100%); /* Move para fora da tela (para cima) */
+  }
+
+
 .nav_mobile ul{
     list-style: none;
     padding-left: 0;
@@ -1217,6 +1225,10 @@ footer{
     #header{
         padding: 40px 4%;
     }
+
+    #header.rolagem{
+        padding-bottom: 15%;
+    }
     #btn_menu{
         display: block;
     }
@@ -1228,9 +1240,12 @@ footer{
         visibility: visible;
         height: 100vh;
     }
+
+    
     .flex .logo{
         width: auto;
         height: 70px;
+     
     }
 
      /* Principal */

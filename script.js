@@ -285,3 +285,21 @@ function closeModal() {
     modal.style.display = "none";
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('#header'); // Seleciona a navbar
+    const footer = document.querySelector('footer'); // Seleciona o footer
+
+    window.addEventListener('scroll', function () {
+        const footerTop = footer.getBoundingClientRect().top; // Distância do topo do footer
+        const windowHeight = window.innerHeight; // Altura da janela visível
+
+        if (footerTop <= windowHeight) {
+            // Se o footer estiver visível na janela, a navbar desaparece
+            navbar.style.opacity = '0';
+            navbar.style.transition = 'opacity 0.5s'; // Animação para suavizar o desaparecimento
+        } else {
+            // Caso contrário, a navbar reaparece
+            navbar.style.opacity = '1';
+        }
+    });
+});
