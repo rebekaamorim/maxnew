@@ -17,7 +17,7 @@ function animarMenu(){
 }
 
 // Serviços
-
+/*
 const info = document.querySelector('.fundo_caixa');
 info.style.pointerEvents = 'none';
 
@@ -72,15 +72,23 @@ function abrirInfos(tipo) {
 
     const informacoes = obterInformacoes(tipo);
     const conteudoHTML = `
+        
+          <div id="informacoesDiv">
+         
+                <div class="d-flex">
+                    <div id= "img-infos" style="background-image: url(${informacoes.imagem})"></div>
+                <div style="padding:20px">
+                 <h2>${informacoes.titulo}</h2>
+                 <h1>${informacoes.descricao}</h1>
+                </div>
+                
+                </div>
 
-          <div id="InformacoesDiv">
-          <h2>${informacoes.titulo}</h2>
-          <h1>${informacoes.descricao}</h1>
+                
+                
+        
+            <div class="d-flex justify-content-end"><button onclick= "fecharInfos()" id="voltar">Voltar</button></div>
           
-          <!-- imagem -->
-          <div id= "img-infos" style="background-image: url(${informacoes.imagem})"></div>
-
-          <button onclick= "fecharInfos()" id="voltar">Voltar</button>
           </div>
       `;
   
@@ -135,7 +143,7 @@ function checkInputNomeCli(){
         errorInput(namecli, "Preencha o Nome!")
     } else{
         const formItem = namecli.parentElement;
-        formItem.className = "form-content"
+        formItem.className = "form-content";
     }
 }
 
@@ -143,10 +151,10 @@ function checkInputEmailCli(){
     const emailValue = emailcli.value;
 
     if(emailValue === ""){
-        errorInput(emailcli, "Preencha o E-mail!")
+        errorInput(emailcli, "Preencha o E-mail!");
     } else{
         const formItem = emailcli.parentElement;
-        formItem.className = "form-content"
+        formItem.className = "form-content";
     }
 }
 
@@ -156,7 +164,7 @@ function checkInputTelCli(){
         errorInput(telcli, "Preencha o Telefone!")
     } else{
         const formItem = telcli.parentElement;
-        formItem.className = "form-content"
+        formItem.className = "form-content";
     }
 }
 
@@ -166,7 +174,7 @@ function checkInputAssunto(){
         errorInput(assunto, "Preencha o Assunto!")
     } else{
         const formItem = assunto.parentElement;
-        formItem.className = "form-content"
+        formItem.className = "form-content";
     }
 }
 
@@ -176,5 +184,104 @@ function errorInput(input, message){
     const textMessage = formItem.querySelector("a")
 
     textMessage.innerText = message;
-    formItem.className = "form-content error"
+    formItem.className = "form-content error";
 }
+
+// parte do portifólio
+
+
+const conteudo_port = document.querySelector(".conteudo_port");
+const conteudoslide = document.querySelector(".slide_port");
+const arrowBtns = document.querySelectorAll(".conteudo_port i");
+const firstCardWidth = conteudoslide.querySelector(".card").offsetWidth;
+const carouselChildrens = [...conteudoslide.children];
+
+let isDragging = false, startX, startScrollLeft, timeoutId;
+let cardPerView = Math.round(conteudoslide.offsetWidth / firstCardWidth);
+
+carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+    conteudoslide.insertAdjacentHTML("afterbegin",card.outerHTML);
+});
+
+carouselChildrens.slice(0, cardPerView).forEach(card => {
+    conteudoslide.insertAdjacentHTML("beforeend",card.outerHTML);
+});
+
+arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () =>{
+        conteudoslide.scrollLeft += btn.id === "esquerda" ? -firstCardWidth : firstCardWidth;
+    })
+    
+})
+const dragStart = (e) => {
+    isDragging = true;
+    conteudoslide.classList.add("dragging");
+    startX = e.pageX;
+    startScrollLeft = conteudoslide.scrollLeft;
+    
+}
+
+const dragging = (e) => {
+    if(!isDragging) return;
+    conteudoslide.scrollLeft = startScrollLeft - (e.pageX - startX);
+}
+
+const dragStop = () => {
+    isDragging = false;
+    conteudoslide.classList.remove("dragging");
+}
+
+const autoPlay = () => {
+    if(window,innerWidth < 800) return;
+    timeoutId = setTimeout(() => conteudoslide.scrollLeft += firstCardWidth, 2500);
+}
+autoPlay()
+const infiniteScroll = () => {
+    if(conteudoslide.scrollLeft === 0 ) {
+        conteudoslide.classList.add("no-transition");
+        conteudoslide.scrollLeft = conteudoslide.scrollWidth - ( 2 * conteudoslide.offsetWidth);
+        conteudoslide.classList.remove("no-transition");
+    } else if(Math.ceil(conteudoslide.scrollLeft) === conteudoslide. scrollWidth - conteudoslide.offsetWidth){
+        conteudoslide.classList.add("no-transition");
+        conteudoslide.scrollLeft = conteudoslide.offsetWidth;
+        conteudoslide.classList.remove("no-transition");
+    }
+    clearTimeout(timeoutId);
+    if(!conteudo_port.matches(":hover")) autoPlay();
+}
+conteudoslide.addEventListener("mousemove", dragging);
+conteudoslide.addEventListener("mousedown", dragStart);
+document.addEventListener("mouseup", dragStop);
+conteudoslide.addEventListener("scroll", infiniteScroll);
+conteudo_port.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+conteudo_port.addEventListener("mouseleave", autoPlay);
+
+//abrir referencias da tela portifólio
+
+function openModal(imageSrc, nomeport, details) {
+    var modal = document.getElementById("modal-porti");
+    var modalImg = document.getElementById("modal-image");
+    var modaltitulo = document.getElementById("caption")
+    var detailsList = document.getElementById("details");
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+    modaltitulo.innerText = nomeport;
+
+    detailsList.innerHTML = '';
+    
+    // Adiciona cada detalhe como um item de lista
+    details.forEach(detail => {
+        var listItem = document.createElement('li');
+        listItem.innerText = detail;
+        detailsList.appendChild(listItem);
+
+    });
+}
+
+
+
+function closeModal() {
+    var modal = document.getElementById("modal-porti");
+    modal.style.display = "none";
+}
+

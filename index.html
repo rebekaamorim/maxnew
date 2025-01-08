@@ -10,32 +10,33 @@
     <meta name="viewport" content="width=device-width, initial-scale= 1.0"/>
     <link rel="shortcut icon" href="img/icone.png"/>
 	<link rel="stylesheet" type="text/css" href="estilo.css"/> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <script defer src="script.js"></script> 
+    
 </head>
 
 <body>
+
+   
      <!--Navbar-->
      <header id="header">
-        <div class="container">
-            <div class="flex">
+        <div class="">
+            <div class="flex container">
                 
                 <a href="#"><img class="logo" src="img/logomax.png"></a>
                 
                 <nav class="nav">
                     <ul>
-                        <li><a href="#">home</a></li>
-                        <li><a href="#servicos">serviços</a></li>
-                        <li><a href="#sobre_nos">quem somos</a></li>
-                        <li><a href="#destaques">destaques</a></li>
-                        <li><a href="#">portifólio</a></li>
-                        <li><a href="#">contato</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#sobre_nos">Quem somos</a></li>
+                        <li><a href="#destaques">Destaques</a></li>
+                        <li><a href="#portifolio">Portifólio</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                       
                     </ul>
                 </nav>
-
-                <div id="container_tel">
-                    <img src="img/contorno_telefone_laranja.png">
-                    <a href="#">(11) 3382-1394</a>
-                </div>
 
                 <button onclick="animarMenu()" id="btn_menu">
                     <span class="linha"></span>
@@ -45,12 +46,12 @@
 
                 <nav class="nav_mobile" id="nav_mobile">
                     <ul>
-                        <li><a href="#">home</a></li>
+                        <li><a href="#home">home</a></li>
                         <li><a href="#servicos">serviços</a></li>
                         <li><a href="#sobre_nos">quem somos</a></li>
                         <li><a href="#destaques">destaques</a></li>
-                        <li><a href="#">portifólio</a></li>
-                        <li><a href="#">contato</a></li>
+                        <li><a href="#portifolio">portifólio</a></li>
+                        <li><a href="#contato">contato</a></li>
                     </ul>
                 </nav>            
             </div>
@@ -58,58 +59,65 @@
     </header>
     
     <!--Sessão Home-->
-    <section class="banner">
+    <section class="banner" id="home">
         <video autoplay muted loop>
             <source src="videos/video_principal.mp4">
         </video>
-        <div id="orcamento_main">
-            <h1>A melhor solução para o seu condomínio!</h1>
-            <a href="#"><button>Orçamento Gratuito <img src="img/setinha.png"></button></a>
-        </div>
-
-        <div id="social_main">
-            <label>@maxnew.br</label>
-            <hr>
-            <a href="#"><img src="img/contorno_instalaranja.png"></a>
-            <a href="#"><img src="img/face_laranja.png"></a>
-        </div>
-
-        <div id="sombra_superior"></div>
+        <div class="container orcamento_main">
+            <div class="justify-content-center">
+                <h1>A melhor solução para o seu condomínio!</h1>
+            <a href="#contato" style="text-decoration:none;"><button><p>Orçamento Gratuito </p><img src="img/setinha.png"></button></a>
+        
+            </div>
+            </div>
         <div id="sombra_esquerda"></div>
-        <div id="sombra_direita"></div>
+     
     </section>
 
 
     <!--Sessão Serviços-->
-    <section id="servicos">
-        <h1>SERVIÇOS</h1>
-        <div id="fundo_servicos"></div>
-
-        <div class="imagens">
-            <div class="caixa visivel" style="background-image: url('img/pintura.jpg')" onclick="abrirInfos('Pintura')"> <span class="titulo-img">PINTURA</span></div>
-            <div class="caixa visivel" style="background-image: url('img/restauracao.jpg')" onclick="abrirInfos('Restauração')"> <span class="titulo-img">RESTAURAÇÃO</span></div>
-            <div class="caixa visivel" style="background-image: url('img/hidro.png')" onclick="abrirInfos('Hidrojateamento')"><span class="titulo-img"> HIDROJATEAMENTO</span> </div>
-            <div class="caixa visivel" style="background-image: url('img/Impermeabilização.jpg')" onclick="abrirInfos('Impermeabilização')"> <span class="titulo-img">IMPERMEABILIZAÇÃO</span></div>   
-            </div> 
-            
-            <div id="informacoesDiv" class="fundo_caixa visivel">
-                <!-- Conteúdo da div de informações -->
+    <section id="servicos" class="justify-content-center">
+        <div class="fundo_serv ">
+            <h1>SERVIÇOS</h1>
+            <div class="container my-5">
+                <div class="imagens">
+                    <div class="caixa" style="background-image: url('img/pintura.jpg')" data-bs-toggle="modal" data-bs-target="#infoModal" onclick="carregarModal('Pintura')">
+                        <span class="titulo-img">PINTURA</span>
+                    </div>
+                    <div class="caixa" style="background-image: url('img/restauracao.jpg')" data-bs-toggle="modal" data-bs-target="#infoModal" onclick="carregarModal('Restauração')">
+                        <span class="titulo-img">RESTAURAÇÃO</span>
+                    </div>
+                    <div class="caixa" style="background-image: url('img/hidro.png')" data-bs-toggle="modal" data-bs-target="#infoModal" onclick="carregarModal('Hidrojateamento')">
+                        <span class="titulo-img">HIDROJATEAMENTO</span>
+                    </div>
+                    <div class="caixa" style="background-image: url('img/Impermeabilização.jpg')" data-bs-toggle="modal" data-bs-target="#infoModal" onclick="carregarModal('Impermeabilização')">
+                        <span class="titulo-img">IMPERMEABILIZAÇÃO</span>
+                    </div>
+                </div>
             </div>
-
+        
+           
         </div>
+    </div>
+
+    
+                     
+        
+    
+        
     </section>
    
     <!--Sessão Sobre Nós-->
     </section>
-    <section id="sobre_nos">
+    <section id="sobre_nos " class="sobre_nos ">
         <div class="flex-sobre">
             <div id="sobre_conteudo">
                 <h1>QUEM SOMOS</h1>
-                <p>Uma história é construída ao longo do tempo com trabalho duro, persistência e paciência. E foi assim que tudo começou, do zero, mas tijolo a tijolo estamos a mais de 20 anos construindo nossa história com colaboradores qualificados que cooperando entre si, buscam a excelência a cada dia, para entregar aos nossos clientes o Melhor Serviço com toda a Segurança e Garantia</p>
+                <p id="historia">Uma história é construída ao longo do tempo com trabalho duro, persistência e paciência. E foi assim que tudo começou, do zero, mas tijolo a tijolo estamos a mais de 20 anos construindo nossa história com colaboradores qualificados que cooperando entre si, buscam a excelência a cada dia, para entregar aos nossos clientes o Melhor Serviço com toda a Segurança e Garantia</p>
             </div>
             <div id="sobre_img">
                 <h1>QUEM SOMOS</h1>
-                <img src="img/moca.png">
+                <img src="img/moca.png" >
             </div>
         </div>
         <div class="flex-sobre-b">
@@ -132,13 +140,13 @@
     <!--Sessão Destaques-->
     <section id="destaques">
         <div id="fund_dest_light"></div>
-        <div id="fund_dest_dark"></div>
+        <div class="fund_dest_dark"></div>
         
         <div id="titulos_dest">
-            <h1 id="normal1">DESTAQUES</h1>
-            <h1 id="vazado1">DESTAQUES</h1>
-            <h1 id="vazado2">DESTAQUES</h1>
-            <h1 id="normal2">DESTAQUES</h1>
+            <h1 class="textdes"id="normal1">DESTAQUES</h1>
+            <h1 class="textdes" id="vazado1">DESTAQUES</h1>
+            <h1 class="textdes" id="vazado2">DESTAQUES</h1>
+            <h1 class="textdes" id="normal2">DESTAQUES</h1>
         </div>
         <div id="titulos_dest2">
             <h1 id="normal">DESTAQUES</h1>
@@ -152,7 +160,7 @@
             </div>
         </div>
 
-        <div id="blocos_dest">
+        <div class="blocos_dest">
             <div class="bloco" id="fund_altura">
                 <div class="conteudo_dest" id="img_altura" src="img/hidrojateamento3.jpg"></div>
                 <h2 class="txt_blocos">Reparos em altura</h2>
@@ -160,12 +168,21 @@
                 <p>Pequenos reparos em altura, tratamento de trincas, reposição de pastilhas, texturas e etc</p>
                 <img class="seta_dest" src="img/seta_laranja.png" onclick="expandirDest('fund_altura')" name="seta_dest">
             </div>
+            <div class="d-flex justify-content-center">
+                <img src="img/scroll.png" id="scroll-porti"/>
+            
+            </div>
             <div class="bloco" id="fund_garagem">
                 <div class="conteudo_dest2" id="img_garagem" src="img/hidrojateamento3.jpg"></div>
                 <h2 class="txt_blocos">Pinturas em garagem</h2>
                 <p>Oferecemos serviço emergencial de restaurações. Nosso objetivo é resolver os problemas urgentes dos nossos clientes no menor tempo possível com custo acessível a todos.</p>
                 <p>Pequenos reparos em altura, tratamento de trincas, reposição de pastilhas, texturas e etc</p>
                 <img class="seta_dest" src="img/seta_laranja.png" onclick="expandirDest('fund_garagem')" name="seta_dest">
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <img src="img/scroll.png" id="scroll-porti"/>
+            
             </div>
             <div class="bloco" id="fund_quadra">
                 <div class="conteudo_dest" id="img_quadra" src="img/hidrojateamento3.jpg"></div>
@@ -182,16 +199,116 @@
             <div id="fundo_port"> 
                 <h1 id="title_port">PORTIFÓLIO</h1>
             </div>
-
-            <div class="slide-port">
-                <div class="references">
-                    <div class="card">
-                        <div class="image-box">
-                            <img src="img/hidro.png" alt="">
+            <br>
+            <div class="conteudo_port">
+                <i id="esquerda" class="fa-solid fa-angle-left"></i>
+                    <ul class="slide_port">
+                        <li class="card">
+                            <div class="image-box" id="img1" onclick="openModal('img/hidro.png', 'titulo', ['oioi', 'ebebe'])">
+                                <a href="#foto1">
+                                    <div class="titulo-img-port">VILA MARIANA</div>
+                                    <div class="sombra"></div>
+                                    <img src="img/hidro.png" alt="" draggable="false" >
+                                </a>
+                            </div>
+                            <div class="detalhes_port">
+                                    <ul class="lista_servicos">
+                                       <li>uma coisinha aqui</li>
+                                       <li>outra ali</li>
+                                       <li>e ficou tudo lindo</li>
+                                    </ul>
+                            </div>
+                            
+                        
+                        </li>
+                        <li class="card">
+                            <div class="image-box" id="img2" onclick="openModal('img/hidro.png', 'titulo', ['oioi', 'ebebe'])">
+                                <a href="#foto2">
+                                    <div class="titulo-img-port">Vila Piaui</div>
+                                    <div class="sombra"></div>
+                                    <img src="img/hidro.png" alt="" draggable="false" >
+                                </a>
+                                
+                            </div>
+                            <div class="detalhes_port">
+                                <ul class="lista_servicos">
+                                   <li>uma coisinha aqui</li>
+                                   <li>outra ali</li>
+                                   <li>e ficou tudo lindo</li>
+                                </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
+                        </li>
+
+                        <li class="card">
+                            <div class="image-box" id="img3" onclick="openModal('img/hidro.png', 'titulo', ['oioi', 'ebebe'])">
+                                <a href="#foto3">
+                                    <div class="titulo-img-port">Vila bem te vi</div>
+                                    <div class="sombra"></div>
+                                    <img src="img/hidro.png" alt="" draggable="false" >
+                                </a>
+                            </div>
+                            <div class="detalhes_port">
+                                <ul class="lista_servicos">
+                                   <li>uma coisinha aqui</li>
+                                   <li>outra ali</li>
+                                   <li>e ficou tudo lindo</li>
+                                </ul>
+                        </div>
+                        </li>
+
+                        <li class="card" onclick="openModal('img/hidro.png', 'titulo', ['oioi', 'ebebe'])">
+                            <div class="image-box" id="foto4">
+                                <div class="titulo-img-port">Vila to nem ai</div>
+                                <div class="sombra"></div>
+                                <img src="img/hidro.png" alt="" draggable="false" >
+                            </div>
+                            <div class="detalhes_port">
+                                <ul class="lista_servicos">
+                                   <li>uma coisinha aqui</li>
+                                   <li>outra ali</li>
+                                   <li>e ficou tudo lindo</li>
+                                </ul>
+                        </div>
+                        </li>
+
+                        <div class="card">
+                            <div class="image-box" id="img5" onclick="openModal('img/hidro.png', 'titulo', ['oioi', 'ebebe'])">
+                                <a href="#foto5">
+                                    <div class="titulo-img-port">Vila pode vir</div>
+                                    <div class="sombra"></div>
+                                    <img src="img/hidro.png" alt="" draggable="false" >
+                                </a>                                   
+                            </div>
+                        </div>
+
+                        <li class="card">
+                            <div class="image-box" id="img6" onclick="openModal('img/hidro.png', 'titulo', ['oioi', 'ebebe'])">
+                                <a href="#foto6">
+                                    <div class="titulo-img-port">Vila mora aqui</div>
+                                    <div class="sombra"></div>
+                                    <img src="img/hidro.png" alt="" draggable="false" >
+                                </a>
+                            </div>
+                        </li>    
+                           
+                    </ul>
+            <i id="direita" class="fa-solid fa-angle-right"></i>
+
+        </div>
+        <div id="modal-porti" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+        <div class="conteudofoto">
+            <img class="modal-content-porti" id="modal-image">
+            <div class="refer">
+                    <div id="caption"></div>
+                    <br>
+                    <lu id="details">
+                    </lu>
+        </div>
+        </div>
+                
+    </div>
+            
     </section>
 
     <!--Sessão Contato-->
@@ -259,8 +376,10 @@
         <div class="footer_content">
             <div id="footer_contacts">
                 <img id="logo" src="img/logomax.png" alt="Logo">
-                
             </div>
+                
+                
+        
 
                 <ul class= "footer-list">
                     <li>
@@ -290,6 +409,73 @@
             2024 por Max New Restauração de Fachadas.
         </div>
     </footer>
+
+
+    <!--modais-->
+
+    <div class="modal fade " id="infoModal" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" id="fundo_caixa">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="infoModalBody">
+                    <!-- Imagem correspondente -->
+                    <img id="infoModalImage" src="" alt="Imagem correspondente" class="img-fluid mb-3 " style="display: none;" />
+                    <!-- O conteúdo dinâmico será carregado aqui -->
+                    <p id="infoModalText" class="align-text-justify"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="voltar" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>                           
+    
+
+    <!-- Bootstrap JS + Popper.js -->
+
+    <script>
+        // Informações para cada seção
+const infos = {
+    Pintura: {
+        texto: "Executamos com critério todas as etapas de tratamento e preparação antes da pintura, assim podemos garantir a qualidade e eficácia dos nossos serviços. Nosso compromisso é com você! Profissionais qualificados, material de alto padrão de qualidade (Premium). Qualidade Garantida!",
+        imagem: "img/pintura.jpg"
+    },
+    Restauração: {
+        texto: "Para assegurar a durabilidade da conservação do prédio e a frescura da pintura, seguimos rigorosamente todas as etapas de restauração. Inicialmente, realizamos limpeza nas fachadas para identificar trincas, fissuras, rebocos soltos. Isso preserva o patrimônio e a qualidade da pintura. Compromisso: restauração genuína",
+        imagem: "img/restauracao.jpg"
+    },
+    Hidrojateamento: {
+        texto: "A Max New, com equipe experiente, garante remoção eficaz de resíduos e detritos em fachadas prediais. Seja na preparação para revestimentos ou concreto endurecido, oferecemos soluções personalizadas, atendendo às necessidades de cada cliente com eficácia.",
+        imagem: "img/hidro.png"
+    },
+    Impermeabilização: {
+        texto: "A impermeabilização em fachadas protege edifícios contra danos causados por clima e umidade, prevenindo infiltrações e danos estruturais. Essa prática mantém a integridade do prédio, contribui para sua durabilidade, reduzindo riscos de corrosão e mofo, e assegura um ambiente interno mais seguro e saudável.",
+        imagem: "img/Impermeabilização.jpg"
+    }
+};
+
+// Função para carregar a modal dinamicamente
+function carregarModal(chave) {
+    const modalTitle = document.getElementById('infoModalLabel');
+    const modalBodyImage = document.getElementById('infoModalImage');
+    const modalBodyText = document.getElementById('infoModalText');
+
+    // Carregar informações dinâmicas
+    const info = infos[chave];
+
+    modalTitle.textContent = chave;
+    modalBodyText.textContent = info.texto;
+
+    // Atualizar imagem e torná-la visível
+    modalBodyImage.src = info.imagem;
+    modalBodyImage.style.display = "block";
+}
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
