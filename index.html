@@ -317,29 +317,31 @@
         <div class="contato1">
             <div class="content_contato">
                 <h2>Garanta seu Orçamento totalmente <span class="destacado_h2">GRATUITO!</span></h2>
-                    <form id="form" class="form">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="form">
+
+                        <input type="hidden" name="access_key" value="9ef83cb4-2cbf-45dc-a356-7a77f310f48a">
                         <div class="form-content ">
-                            <input type="text" id="namecli" placeholder="Nome"/>
+                            <input type="text" id="namecli" placeholder="Nome" required/>
                             <a>mensagem de erro</a>
                         </div>
 
                         <div class="form-content">
-                            <input type="email" id="emailcli" placeholder="E-mail"/>
+                            <input type="email" name="email" placeholder="E-mail" required/>
                             <a>mensagem de erro</a>
                         </div>
 
                         <div class="form-content">
-                            <input type="tel" id="telcli" placeholder="Telefone" />
+                            <input type="tel"  name="telefone" placeholder="(dd) 000000-0000 " required/>
                             <a>mensagem de erro</a>
                         </div>
 
                         <div class="form-content">
-                            <input type="text" id="assunto" placeholder="Assunto"/>
+                            <input type="text" name="assunto"placeholder="Assunto" required/>
                             <a>mensagem de erro</a>
                         </div>
 
                         <div class="form-content">
-                            <textarea row="10" id="mensagem" name="Mensagem" placeholder="Mensagem"></textarea>
+                            <textarea type="message" row="10" id="mensagem" name="Mensagem" placeholder="Mensagem" required></textarea>
                         </div>
 
                         <button type="submit"> Enviar </button>
@@ -354,7 +356,7 @@
                     <img id="footer-link" src="img/telefone_laranja.png" alt="Telefone"><h3> (11) 3382-1394</h3>
                 </div>
                 <div id= blococont>
-                    <img id="footer-link" src="img/email.png" alt="Telefone"><h3>contato@maxnew.com.br</h3>
+                    <img id="footer-link" src="img/email.png" alt="Telefone"><h3>orcamento@maxnew.com.br</h3>
                 </div>
                 <div id="blococont">
                     <a href="https://www.instagram.com/maxnew.br?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img id="footer-link"src="img/instagram.png" alt="Instagram"></a>

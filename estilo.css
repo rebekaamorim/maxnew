@@ -583,7 +583,7 @@
     color: transparent;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #F6F6EF;
-    margin: 
+
 }
 .blocos_dest{
     width: 100%;
@@ -1227,7 +1227,7 @@ footer{
     }
 
     #header.rolagem{
-        padding-bottom: 15%;
+        padding-bottom: 20%;
     }
     #btn_menu{
         display: block;
