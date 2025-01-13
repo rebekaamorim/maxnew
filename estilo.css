@@ -635,13 +635,14 @@
     height: auto;
 }
 .bloco #img_altura{
-    background-image: url(img/hidrojateamento3.jpg);
+    background-image: url(img/reparo.jpeg);
+
     background-size: cover;
     
 }
 .blocos_dest #fund_altura.expandido #img_altura{
     height: 16vw;
-    background-image: url(img/hidrojateamento2.jpg);
+    background-image: url(img/reparo.jpeg);
 }
 #fund_altura.expandido .seta_dest{
     transform-origin: center;
@@ -662,13 +663,13 @@
     height: auto;
 }
 #img_garagem{
-    background-image: url(img/hidrojateamento3.jpg);
+    background-image: url(img/garagem.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 #fund_garagem.expandido #img_garagem{
     height: 16vw;
-    background-image: url(img/hidrojateamento2.jpg);
+    background-image: url(img/garagem.jpg);
 }
 
 #fund_garagem.expandido .seta_dest{
@@ -691,13 +692,13 @@
     margin-top: 0;
 }
 #img_quadra{
-    background-image: url(img/hidrojateamento3.jpg);
+    background-image: url(img/quadra.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 #fund_quadra.expandido #img_quadra{
     height: 16vw;
-    background-image: url(img/hidrojateamento2.jpg);
+    background-image: url(img/quadra.jpeg);
 }
 #fund_quadra.expandido .seta_dest{
     transform-origin: center;
