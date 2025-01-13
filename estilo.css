@@ -1923,3 +1923,57 @@ footer{
         }
     
 }
+
+@media screen and (min-width:1250px) {
+
+#header.rolagem{
+    
+    height: 15vh;
+    transition: .5s .1s;
+}
+
+    .nav ul li a{
+        font-size: 20px !important;
+    }
+
+    .orcamento_main h1{
+        font-size: 3.5rem;
+  
+        margin-left: 10%;
+   
+    }
+
+    .orcamento_main button{
+     
+        margin-left: 10%;
+    }
+    
+    .imagens{
+        justify-content: center;
+    }
+
+    .imagens .caixa{
+        width: 200px;
+        height: 300px;
+    }
+
+    .flex-sobre #sobre_conteudo p{
+        font-size: 1rem;
+    }
+    
+    #servicos h1{
+        font-size: 50px;
+        padding-bottom: 0px;
+    }
+    .fundo_serv{
+        margin-top: -20vh;
+    }
+    #sobrenos{
+        height: 100vh;
+    }
+    .flex-sobre #sobre_img img{
+      
+        height: 400px;
+        
+    }
+}
