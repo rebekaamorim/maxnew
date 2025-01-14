@@ -150,3 +150,41 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+      // Informações para cada seção
+      const infos = {
+        Pintura: {
+            texto: "Executamos com critério todas as etapas de tratamento e preparação antes da pintura, assim podemos garantir a qualidade e eficácia dos nossos serviços. Nosso compromisso é com você! Profissionais qualificados, material de alto padrão de qualidade (Premium). Qualidade Garantida!",
+            imagem: "img/pintura.jpg"
+        },
+        Restauração: {
+            texto: "Para assegurar a durabilidade da conservação do prédio e a frescura da pintura, seguimos rigorosamente todas as etapas de restauração. Inicialmente, realizamos limpeza nas fachadas para identificar trincas, fissuras, rebocos soltos. Isso preserva o patrimônio e a qualidade da pintura. Compromisso: restauração genuína",
+            imagem: "img/restauracao.jpg"
+        },
+        Hidrojateamento: {
+            texto: "A Max New, com equipe experiente, garante remoção eficaz de resíduos e detritos em fachadas prediais. Seja na preparação para revestimentos ou concreto endurecido, oferecemos soluções personalizadas, atendendo às necessidades de cada cliente com eficácia.",
+            imagem: "img/hidro.png"
+        },
+        Impermeabilização: {
+            texto: "A impermeabilização em fachadas protege edifícios contra danos causados por clima e umidade, prevenindo infiltrações e danos estruturais. Essa prática mantém a integridade do prédio, contribui para sua durabilidade, reduzindo riscos de corrosão e mofo, e assegura um ambiente interno mais seguro e saudável.",
+            imagem: "img/Impermeabilização.jpg"
+        }
+    };
+    
+    // Função para carregar a modal dinamicamente
+    function carregarModal(chave) {
+        const modalTitle = document.getElementById('infoModalLabel');
+        const modalBodyImage = document.getElementById('infoModalImage');
+        const modalBodyText = document.getElementById('infoModalText');
+    
+        // Carregar informações dinâmicas
+        const info = infos[chave];
+    
+        modalTitle.textContent = chave;
+        modalBodyText.textContent = info.texto;
+    
+        // Atualizar imagem e torná-la visível
+        modalBodyImage.src = info.imagem;
+        modalBodyImage.style.display = "block";
+    }
+    
