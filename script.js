@@ -154,19 +154,19 @@ document.addEventListener('DOMContentLoaded', function () {
       // Informações para cada seção
       const infos = {
         Pintura: {
-            texto: "Executamos com critério todas as etapas de tratamento e preparação antes da pintura, assim podemos garantir a qualidade e eficácia dos nossos serviços. Nosso compromisso é com você! Profissionais qualificados, material de alto padrão de qualidade (Premium). Qualidade Garantida!",
+            texto: "Na etapa final, a pintura das fachadas em alvenaria é realizada com tintas 1ª Linha – Qualidade 100% Acrílico Premium das marcas renomadas como Suvinil, Sherwin-Williams e Coral, assegurando um acabamento impecável que não apenas realça a estética, mas também atende aos mais rigorosos padrões de qualidade e segurança.",
             imagem: "img/pintura.jpg"
         },
         Restauração: {
-            texto: "Para assegurar a durabilidade da conservação do prédio e a frescura da pintura, seguimos rigorosamente todas as etapas de restauração. Inicialmente, realizamos limpeza nas fachadas para identificar trincas, fissuras, rebocos soltos. Isso preserva o patrimônio e a qualidade da pintura. Compromisso: restauração genuína",
+            texto: "A restauração é uma etapa crucial para o melhor resultado da pintura predial com garantia. Estamos comprometidos com a qualidade dos nossos serviços, trabalhando sem deixar nada para trás na recuperação de fissuras, trincas e rebocos danificados e etc. Isso nos permite oferecer uma garantia sólida, garantindo resultados duradouros e sem problemas para nossos clientes.",
             imagem: "img/restauracao.jpg"
         },
         Hidrojateamento: {
-            texto: "A Max New, com equipe experiente, garante remoção eficaz de resíduos e detritos em fachadas prediais. Seja na preparação para revestimentos ou concreto endurecido, oferecemos soluções personalizadas, atendendo às necessidades de cada cliente com eficácia.",
+            texto: "A Max New realiza hidrojateamento e limpeza técnica de fachadas utilizando equipamentos de alta pressão e baixa pressão. Essa técnica eficiente remove mofo, fuligem e impurezas causadas pela poluição, garantindo uma superfície limpa e preparada. Além disso, realizamos um mapeamento detalhado das áreas a serem restauradas, fornecendo soluções personalizadas para cada cliente.",
             imagem: "img/hidro.png"
         },
         Impermeabilização: {
-            texto: "A impermeabilização em fachadas protege edifícios contra danos causados por clima e umidade, prevenindo infiltrações e danos estruturais. Essa prática mantém a integridade do prédio, contribui para sua durabilidade, reduzindo riscos de corrosão e mofo, e assegura um ambiente interno mais seguro e saudável.",
+            texto: "Na Max New, utilizamos apenas produtos de 1a linha com Qualidade Premium para a Impermeabilização de fachadas. Esse processo previne infiltrações e o aparecimento de fissuras,  garantindo um resultado final excepcional no acabamento da pintura e maior durabilidade para sua edificação.",
             imagem: "img/Impermeabilização.jpg"
         }
     };
